@@ -169,7 +169,20 @@ public class BinarySearchTree<T extends Comparable<T>> {
 	//Traverse the tree in an inorder fashion but using a stack
 	public void inOrderStack() {
 		Stack<BSTNode<T>> in = new Stack<BSTNode<T>>();
-		
+		BSTNode<T> node = root;
+		if (node != null) {
+			while (node != null || !in.isEmpty()) {
+				while (node != null) {
+					in.push(node);
+					node = node.leftChild;
+				}
+				node = in.pop();
+				System.out.print(node.data + " ");
+				node = node.rightChild;
+				
+			}
+			
+		}
 		
 	}
 	
