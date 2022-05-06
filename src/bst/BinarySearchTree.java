@@ -179,7 +179,6 @@ public class BinarySearchTree<T extends Comparable<T>> {
 				node = in.pop();
 				System.out.print(node.data + " ");
 				node = node.rightChild;
-				
 			}
 			
 		}
